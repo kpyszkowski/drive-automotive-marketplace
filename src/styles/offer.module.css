@@ -1,5 +1,12 @@
+.container {
+}
+
+.wrapper {
+  @apply space-y-24;
+}
+
 .offerHeader {
-  @apply mx-auto w-full py-36;
+  @apply mx-auto w-full py-12;
 }
 
 .offerFeatures {

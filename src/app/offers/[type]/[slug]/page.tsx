@@ -1,3 +1,4 @@
+// TODO: Investigate why lack of this directive causes error
 import styles from '@/styles/offer.module.css'
 import { SiMercedes } from 'react-icons/si'
 import { FireIcon } from '@heroicons/react/24/outline'
@@ -8,12 +9,13 @@ import {
   ScrollGallery,
   Container,
   OfferDescription,
+  CollapsibleFeaturesList,
 } from '@/components'
 
 export default function Home() {
   return (
-    <main className="h-[800vh]">
-      <Container>
+    <main className={styles.container}>
+      <Container className={styles.wrapper}>
         <Breadcrumbs
           items={[
             { label: 'Osobowe', path: '#' },
@@ -37,18 +39,56 @@ export default function Home() {
             { label: 'Rok produkcji', value: '2021', icon: FireIcon },
           ]}
         />
+        <ScrollGallery
+          items={Array(8).fill({
+            width: 1200,
+            height: 800,
+            alt: 'mercedes',
+            src: 'https://images.pexels.com/photos/16511358/pexels-photo-16511358/free-photo-of-a-modern-blue-mercedes-amg-gt-r-parked-in-front-of-the-car-salon.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          })}
+        />
+
+        <OfferDescription />
+        <CollapsibleFeaturesList
+          items={[
+            {
+              label: 'Komfort',
+              items: [
+                'Podgrzewane fotele przednie',
+                'Podgrzewane fotele tylne',
+                'Dostęp bezkluczykowy',
+                'Automatyczne domykanie drzwi',
+                'Skórzana tapicerka',
+                'Czterostrefowa klimatyzacja',
+              ],
+            },
+            {
+              label: 'Bezpieczeństwo',
+              items: [
+                'Podgrzewane fotele przednie',
+                'Podgrzewane fotele tylne',
+                'Dostęp bezkluczykowy',
+                'Automatyczne domykanie drzwi',
+                'Skórzana tapicerka',
+                'Czterostrefowa klimatyzacja',
+              ],
+            },
+            {
+              label: 'Osiągi i wydajność',
+              items: [
+                'Podgrzewane fotele przednie',
+                'Podgrzewane fotele tylne',
+                'Dostęp bezkluczykowy',
+                'Automatyczne domykanie drzwi',
+                'Skórzana tapicerka',
+                'Czterostrefowa klimatyzacja',
+              ],
+            },
+          ]}
+        />
+        {/* Discussion board */}
+        {/* Contact and address */}
       </Container>
-      <ScrollGallery
-        items={Array(8).fill({
-          width: 1200,
-          height: 800,
-          alt: 'mercedes',
-          src: 'https://images.pexels.com/photos/16511358/pexels-photo-16511358/free-photo-of-a-modern-blue-mercedes-amg-gt-r-parked-in-front-of-the-car-salon.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        })}
-      />
-      <OfferDescription />
-      {/* Discussion board */}
-      {/* Contact and address */}
     </main>
   )
 }

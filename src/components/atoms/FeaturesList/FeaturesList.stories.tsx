@@ -11,9 +11,8 @@ const meta: Meta<typeof FeaturesList> = {
 export default meta
 type Story = StoryObj<typeof FeaturesList>
 
-export const Base: Story = {
+export const Default: Story = {
   args: {
-    variant: 'base',
     items: [
       { label: 'Power', value: '300 KM', icon: FireIcon },
       { label: 'Fuel', value: 'Diesel', icon: FireIcon },

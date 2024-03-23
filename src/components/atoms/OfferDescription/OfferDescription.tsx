@@ -1,9 +1,7 @@
 import type { OfferDescriptionProps } from './OfferDescription.types'
-import clsx from 'clsx'
 import styles from './OfferDescription.module.css'
 import { remark } from 'remark'
 import html from 'remark-html'
-import { Container } from '@/components'
 
 // TODO: fetch from API, parse on server
 const getContent = async () => {
@@ -42,14 +40,14 @@ export const OfferDescription = async (props: OfferDescriptionProps) => {
   const content = await getContent()
 
   return (
-    <Container
+    <div
       data-testid="offer-description"
       {...restProps}
     >
-      <div
+      <article
         className={styles.wrapper}
         dangerouslySetInnerHTML={{ __html: content }}
       />
-    </Container>
+    </div>
   )
 }

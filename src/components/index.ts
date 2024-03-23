@@ -8,6 +8,7 @@ export { Logo } from '@/components/atoms/Logo/Logo'
 export { OfferHeader } from '@/components/atoms/OfferHeader/OfferHeader'
 export { TimedCarousel } from '@/components/atoms/TimedCarousel/TimedCarousel'
 export { OfferDescription } from '@/components/atoms/OfferDescription/OfferDescription'
+export { CollapsibleFeaturesList } from '@/components/atoms/CollapsibleFeaturesList/CollapsibleFeaturesList'
 
 export { Combobox } from '@/components/molecules/Combobox/Combobox'
 export { Dropdown } from '@/components/molecules/Dropdown/Dropdown'

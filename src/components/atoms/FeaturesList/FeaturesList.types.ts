@@ -6,17 +6,7 @@ export type FeaturesListItem = {
   icon: (args: HTMLAttributes<SVGSVGElement>) => ReactNode
 }
 
-export type FeaturesListProps = (
-  | {
-      variant?: 'grouped'
-      items: {
-        label: string
-        items: FeaturesListItem[]
-      }[]
-    }
-  | {
-      variant?: 'base'
-      items: FeaturesListItem[]
-    }
-) &
+export type FeaturesListProps = {
+  items: FeaturesListItem[]
+} &
   ComponentPropsWithoutRef<'ul'>

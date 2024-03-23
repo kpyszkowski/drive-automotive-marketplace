@@ -24,9 +24,9 @@
 }
 
 .label {
-  @apply text-base uppercase tracking-wider text-neutral-600;
+  @apply text-base uppercase tracking-wider text-neutral-500;
 }
 
 .value {
-  @apply text-4xl font-medium;
+  @apply text-4xl;
 }

@@ -14,7 +14,7 @@ import {
   type MotionStyle,
 } from 'framer-motion'
 import { useRef, type CSSProperties, useState, useEffect } from 'react'
-import { Button, Container } from '@/components'
+import { Button } from '@/components'
 
 export const ScrollGallery = (props: ScrollGalleryProps) => {
   const { items, className = '', ...restProps } = props
@@ -68,9 +68,8 @@ export const ScrollGallery = (props: ScrollGalleryProps) => {
   const panelY = useTransform(panelYAxisProgress, [0, 1], ['100%', '0%'])
 
   return (
-    <Container
+    <div
       ref={galleryRef}
-      style={{ '--itemsCount': items.length } as CSSProperties}
       className={clsx(className, styles.container)}
       {...restProps}
     >
@@ -125,6 +124,6 @@ export const ScrollGallery = (props: ScrollGalleryProps) => {
           Następne
         </Button>
       </m.div>
-    </Container>
+    </div>
   )
 }
